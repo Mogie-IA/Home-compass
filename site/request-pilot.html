@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Pilot — Home Compass</title>
+  <meta name="description" content="Interested in testing Home Compass with a development, property team, or small group of homes? Share a few details and we'll follow up.">
+  <link rel="icon" type="image/png" href="assets/img/mark.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="index.html">
+          <span class="brand-tile"><img src="assets/img/mark.png" alt="" width="30" height="30"></span>
+          <span>Home <em>Compass</em></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="developers.html">For Developers</a>
+          <a href="homeowners.html">For Homeowners</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="index.html#features">Features</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a class="btn btn-inverse" href="request-pilot.html">Request a Pilot</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="developers.html">For Developers</a>
+      <a href="homeowners.html">For Homeowners</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="index.html#features">Features</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-inverse" href="request-pilot.html">Request a Pilot</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--form">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow eyebrow--light">Developer pilot</span>
+          <h1 class="headline-xl" style="color:#fff">Request a Home Compass pilot</h1>
+          <p class="lead">Interested in testing Home Compass with a development, property team, or small group of homes? Share a few details and we&rsquo;ll follow up.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="container">
+        <div class="form-wrap">
+          <form data-form aria-label="Developer Pilot Request">
+            <h2 class="form-title">Developer Pilot Request</h2>
+            <div class="form-grid">
+              <div class="field">
+                <label for="p-name">Full name</label>
+                <input id="p-name" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="p-email">Work email</label>
+                <input id="p-email" name="email" type="email" placeholder="name@company.com" required autocomplete="email">
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="p-company">Company name</label>
+                <input id="p-company" name="company" type="text" placeholder="Your company or development business" required autocomplete="organization">
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="p-role">Role</label>
+                <select id="p-role" name="role" required>
+                  <option value="" selected disabled>Select your role</option>
+                  <option>Sales / Marketing</option>
+                  <option>Customer Care / Aftercare</option>
+                  <option>Operations</option>
+                  <option>Development / Project Team</option>
+                  <option>Founder / Director</option>
+                  <option>Other</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="p-type">Company type</label>
+                <select id="p-type" name="company_type" required>
+                  <option value="" selected disabled>Select company type</option>
+                  <option>Residential developer</option>
+                  <option>Estate developer</option>
+                  <option>Property management company</option>
+                  <option>Construction company</option>
+                  <option>Real estate agency</option>
+                  <option>Other</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="p-where">Where would you like to pilot Home Compass?</label>
+                <select id="p-where" name="pilot_scope" required>
+                  <option value="" selected disabled>Select an option</option>
+                  <option>One development</option>
+                  <option>One building</option>
+                  <option>A small group of homes</option>
+                  <option>A full development phase</option>
+                  <option>Not sure yet</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="p-homes">Approximate number of homes for pilot</label>
+                <select id="p-homes" name="homes" required>
+                  <option value="" selected disabled>Select a range</option>
+                  <option>1&ndash;10</option>
+                  <option>11&ndash;50</option>
+                  <option>51&ndash;100</option>
+                  <option>100+</option>
+                  <option>Not sure yet</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="p-digital">Do you currently provide digital handover packs?</label>
+                <select id="p-digital" name="digital_packs" required>
+                  <option value="" selected disabled>Select an option</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Partly</option>
+                  <option>Not sure</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field field--full">
+                <label for="p-problem">What problem are you trying to solve?</label>
+                <textarea id="p-problem" name="problem" placeholder="Tell us about your current handover or aftercare process." required></textarea>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field field--full">
+                <label for="p-notes">Anything else we should know? <span class="optional">(optional)</span></label>
+                <textarea id="p-notes" name="notes" placeholder="Share any useful context."></textarea>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary btn-lg" type="submit">Request Pilot</button>
+              </div>
+            </div>
+          </form>
+          <div class="form-success" role="status">
+            <span class="icon-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <h3>Thank you.</h3>
+            <p>Your pilot request has been received. We&rsquo;ll review your details and get back to you shortly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-tile"><img src="assets/img/mark.png" alt="" width="30" height="30"></span>
+            <span>Home <em>Compass</em></span>
+          </a>
+          <p>Home Compass is building a clearer digital handover experience for developers and homeowners.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="developers.html">For Developers</a></li>
+            <li><a href="homeowners.html">For Homeowners</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="request-pilot.html">Request Pilot</a></li>
+            <li><a href="waitlist.html">Join Waitlist</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-cta">
+            <h4>Want early access as a homeowner?</h4>
+            <a class="btn btn-inverse" href="waitlist.html">Join the Waitlist</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Home Compass. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

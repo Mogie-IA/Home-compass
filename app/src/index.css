@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Gilroy (self-hosted) ---------- */
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('./assets/fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  body {
+    @apply font-sans text-slateBody bg-white;
+  }
+  :focus-visible {
+    outline: 3px solid rgb(0 82 204 / 0.45);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .shell {
+    @apply mx-auto w-full max-w-shell px-6;
+  }
+  /* compass-point diamond used by eyebrows and list markers */
+  .diamond {
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  }
+}
+
+/* Shine sweep used by ShineButton — a skewed light band that crosses on hover */
+.shine-wrap {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shine-wrap::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  bottom: -20%;
+  left: -30%;
+  width: 40%;
+  transform: skewX(-20deg) translateX(-160%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(255 255 255 / 0.45),
+    transparent
+  );
+  transition: none;
+  pointer-events: none;
+  z-index: 1;
+}
+.shine-wrap:hover::after {
+  transform: skewX(-20deg) translateX(420%);
+  transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.shine-wrap--dark::after {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgb(126 168 245 / 0.35),
+    transparent
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shine-wrap::after,
+  .shine-wrap:hover::after {
+    transition: none;
+    transform: skewX(-20deg) translateX(-160%);
+  }
+}

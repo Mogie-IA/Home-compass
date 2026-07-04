@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Waitlist — Home Compass</title>
+  <meta name="description" content="Want a better way to manage your home documents, warranties, repairs, and reminders? Join the Home Compass homeowner waitlist.">
+  <link rel="icon" type="image/png" href="assets/img/mark.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="nav" aria-label="Main">
+        <a class="brand" href="index.html">
+          <span class="brand-tile"><img src="assets/img/mark.png" alt="" width="30" height="30"></span>
+          <span>Home <em>Compass</em></span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="developers.html">For Developers</a>
+          <a href="homeowners.html">For Homeowners</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="index.html#features">Features</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a class="btn btn-inverse" href="request-pilot.html">Request a Pilot</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="developers.html">For Developers</a>
+      <a href="homeowners.html">For Homeowners</a>
+      <a href="how-it-works.html">How It Works</a>
+      <a href="index.html#features">Features</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn btn-inverse" href="request-pilot.html">Request a Pilot</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--form">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow eyebrow--light">Homeowner waitlist</span>
+          <h1 class="headline-xl" style="color:#fff">Join the Home Compass homeowner waitlist</h1>
+          <p class="lead">Want a better way to manage your home documents, warranties, repairs, and reminders? Join the waitlist and we&rsquo;ll let you know when Home Compass is available.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-body">
+      <div class="container">
+        <div class="form-wrap">
+          <form data-form aria-label="Homeowner waitlist">
+            <h2 class="form-title">Homeowner Waitlist</h2>
+            <div class="form-grid">
+              <div class="field">
+                <label for="w-name">Full name</label>
+                <input id="w-name" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="w-email">Email address</label>
+                <input id="w-email" name="email" type="email" placeholder="your@email.com" required autocomplete="email">
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="w-who">Are you a homeowner or buyer?</label>
+                <select id="w-who" name="who" required>
+                  <option value="" selected disabled>Select an option</option>
+                  <option>Current homeowner</option>
+                  <option>New-build buyer</option>
+                  <option>Planning to buy soon</option>
+                  <option>Renter</option>
+                  <option>Other</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="w-use">What would you use Home Compass for most?</label>
+                <select id="w-use" name="use" required>
+                  <option value="" selected disabled>Select an option</option>
+                  <option>Finding documents</option>
+                  <option>Tracking warranties</option>
+                  <option>Managing repairs</option>
+                  <option>Setting reminders</option>
+                  <option>Preparing for resale or rental</option>
+                  <option>Not sure yet</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field field--full">
+                <label for="w-property">What kind of property do you live in or plan to buy?</label>
+                <select id="w-property" name="property" required>
+                  <option value="" selected disabled>Select property type</option>
+                  <option>House</option>
+                  <option>Apartment</option>
+                  <option>New-build home</option>
+                  <option>Existing home</option>
+                  <option>Other</option>
+                </select>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="field field--full">
+                <label for="w-message">Optional message <span class="optional">(optional)</span></label>
+                <textarea id="w-message" name="message" placeholder="Tell us what would make managing your home easier."></textarea>
+                <span class="field-error" role="alert"></span>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary btn-lg" type="submit">Join Waitlist</button>
+              </div>
+            </div>
+          </form>
+          <div class="form-success" role="status">
+            <span class="icon-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <h3>You&rsquo;re on the list.</h3>
+            <p>We&rsquo;ll keep you updated as Home Compass becomes available.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-tile"><img src="assets/img/mark.png" alt="" width="30" height="30"></span>
+            <span>Home <em>Compass</em></span>
+          </a>
+          <p>Home Compass is building a clearer digital handover experience for developers and homeowners.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="developers.html">For Developers</a></li>
+            <li><a href="homeowners.html">For Homeowners</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="request-pilot.html">Request Pilot</a></li>
+            <li><a href="waitlist.html">Join Waitlist</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-cta">
+            <h4>Ready to improve home handover?</h4>
+            <a class="btn btn-inverse" href="request-pilot.html">Request a Pilot</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Home Compass. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
