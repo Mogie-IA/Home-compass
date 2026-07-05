@@ -40,11 +40,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <button type="button" onClick={() => openModal('waitlist')} className="relative -my-3 inline-block py-3 text-[#93a7c2] transition-colors hover:text-white">
-                  Join Waitlist
-                </button>
-              </li>
             </ul>
           </div>
           <div>

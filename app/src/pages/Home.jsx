@@ -7,6 +7,7 @@ import Marquee from '../components/Marquee.jsx'
 import Reveal from '../components/Reveal.jsx'
 import Eyebrow from '../components/Eyebrow.jsx'
 import FaqItem from '../components/FaqItem.jsx'
+import ValueCards from '../components/ValueCards.jsx'
 import dashDeveloper from '../assets/img/dash-developer.png'
 import dashHomeowner from '../assets/img/dash-homeowner.png'
 import dashEstates from '../assets/img/dash-estates.png'
@@ -48,7 +49,7 @@ const FAQS = [
   },
   {
     q: 'Is it available now?',
-    a: 'Home Compass is preparing for pilots. Developers can request a pilot; homeowners can join the waitlist.',
+    a: 'Home Compass is preparing for pilots with residential developers. Developers can request a pilot to get started.',
   },
 ]
 
@@ -134,6 +135,9 @@ export default function Home() {
           url: 'app.homecompass.co / handover',
         }}
       />
+
+      {/* ============ Value cards ============ */}
+      <ValueCards />
 
       {/* ============ Problem ============ */}
       <section className="bg-ghost pt-16 md:pt-10">
@@ -313,15 +317,12 @@ export default function Home() {
                 <h3 className="mb-3 text-[clamp(1.4rem,2vw,1.7rem)] font-bold tracking-[-0.01em] text-navy">
                   Everything about your home, in one place.
                 </h3>
-                <ul className="mb-8 flex-1">
+                <ul className="flex-1">
                   <CheckItem>Find documents fast.</CheckItem>
                   <CheckItem>Track warranties and repairs.</CheckItem>
                   <CheckItem>Set reminders that matter.</CheckItem>
                   <CheckItem>Be ready for resale or rental.</CheckItem>
                 </ul>
-                <ShineButton className="self-start" onClick={() => openModal('waitlist')}>
-                  Join the Homeowner Waitlist
-                </ShineButton>
               </motion.article>
             </Reveal>
           </div>

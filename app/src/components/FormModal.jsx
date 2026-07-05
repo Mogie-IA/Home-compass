@@ -7,8 +7,8 @@ import SubscribeButton from './SubscribeButton.jsx'
 /**
  * Overlay form modal (21st.dev "cloud form card" pattern):
  * darkened, blurred backdrop; the panel springs up; Esc, the close
- * button, or a backdrop click dismisses it. Hosts the pilot and
- * waitlist forms so every CTA opens in place instead of navigating.
+ * button, or a backdrop click dismisses it. Hosts the developer pilot
+ * form so every CTA opens in place instead of navigating.
  */
 export default function FormModal() {
   const { modal, closeModal } = useModal()
@@ -32,10 +32,6 @@ export default function FormModal() {
     pilot: {
       title: 'Developer Pilot Request',
       sub: 'Share a few details and we’ll follow up.',
-    },
-    waitlist: {
-      title: 'Homeowner Waitlist',
-      sub: 'We’ll let you know when Home Compass is available.',
     },
   }
 
@@ -72,7 +68,7 @@ export default function FormModal() {
               <p className="mt-1 text-[0.93rem]">{meta[modal].sub}</p>
             </div>
             <div className="max-h-[62vh] overflow-y-auto px-7 py-6 sm:px-9">
-              {modal === 'pilot' ? <PilotForm /> : <WaitlistForm />}
+              <PilotForm />
             </div>
           </motion.div>
         </motion.div>
@@ -262,61 +258,6 @@ export function PilotForm() {
       </Field>
       <div className="sm:col-span-2">
         <SubscribeButton status={status} idleLabel="Request Pilot" successLabel="Request received" className="w-full sm:w-auto" />
-      </div>
-    </form>
-  )
-}
-
-export function WaitlistForm() {
-  const required = ['name', 'email', 'who', 'use', 'property']
-  const { errors, status, done, onSubmit, clearError } = useSubmitFlow(required)
-
-  if (done) {
-    return (
-      <SuccessNote
-        title="You’re on the list."
-        body="We’ll keep you updated as Home Compass becomes available."
-      />
-    )
-  }
-
-  return (
-    <form onSubmit={onSubmit} noValidate onInput={(e) => clearError(e.target.name)} className="grid gap-5 sm:grid-cols-2">
-      <Field label="Full name" error={errors.name}>
-        <TextInput name="name" placeholder="Your full name" autoComplete="name" error={errors.name} />
-      </Field>
-      <Field label="Email address" error={errors.email}>
-        <TextInput name="email" type="email" placeholder="your@email.com" autoComplete="email" error={errors.email} />
-      </Field>
-      <Field label="Are you a homeowner or buyer?" error={errors.who}>
-        <Select
-          name="who"
-          placeholder="Select an option"
-          error={errors.who}
-          options={['Current homeowner', 'New-build buyer', 'Planning to buy soon', 'Renter', 'Other']}
-        />
-      </Field>
-      <Field label="What would you use it for most?" error={errors.use}>
-        <Select
-          name="use"
-          placeholder="Select an option"
-          error={errors.use}
-          options={['Finding documents', 'Tracking warranties', 'Managing repairs', 'Setting reminders', 'Preparing for resale or rental', 'Not sure yet']}
-        />
-      </Field>
-      <Field label="What kind of property?" error={errors.property} full>
-        <Select
-          name="property"
-          placeholder="Select property type"
-          error={errors.property}
-          options={['House', 'Apartment', 'New-build home', 'Existing home', 'Other']}
-        />
-      </Field>
-      <Field label="Optional message" optional full>
-        <TextArea name="message" placeholder="Tell us what would make managing your home easier." />
-      </Field>
-      <div className="sm:col-span-2">
-        <SubscribeButton status={status} idleLabel="Join Waitlist" successLabel="You’re on the list" className="w-full sm:w-auto" />
       </div>
     </form>
   )

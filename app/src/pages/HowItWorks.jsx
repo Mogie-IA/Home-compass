@@ -26,14 +26,9 @@ export default function HowItWorks() {
         title="From handover pack to digital home record."
         lead="Simpler for developers. More useful for homeowners."
         actions={
-          <>
-            <ShineButton variant="inverse" size="lg" onClick={() => openModal('pilot')}>
-              Request a Pilot
-            </ShineButton>
-            <ShineButton variant="ghost" size="lg" onClick={() => openModal('waitlist')}>
-              Join the Waitlist
-            </ShineButton>
-          </>
+          <ShineButton variant="inverse" size="lg" onClick={() => openModal('pilot')}>
+            Request a Pilot
+          </ShineButton>
         }
         shot={{
           src: dashDeveloper,

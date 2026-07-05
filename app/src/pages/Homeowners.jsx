@@ -1,5 +1,3 @@
-import { useModal } from '../components/ModalContext.jsx'
-import ShineButton from '../components/ShineButton.jsx'
 import ScrollHero from '../components/ScrollHero.jsx'
 import FrameShot from '../components/FrameShot.jsx'
 import CardScroller from '../components/CardScroller.jsx'
@@ -17,18 +15,12 @@ const GAINS = [
 ]
 
 export default function Homeowners() {
-  const { openModal } = useModal()
   return (
     <>
       <ScrollHero
         eyebrow="For homeowners"
         title="Your home should come with a memory."
         lead="One organised place for documents, warranties, manuals, repairs, and reminders."
-        actions={
-          <ShineButton variant="inverse" size="lg" onClick={() => openModal('waitlist')}>
-            Join the Waitlist
-          </ShineButton>
-        }
         shot={{
           src: dashHomeowner,
           alt: 'Home Compass My Home dashboard with properties, documents, issues, and reminders',
@@ -91,20 +83,17 @@ export default function Homeowners() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Closing — informational, no signup yet */}
       <section className="py-24 text-center">
         <Reveal className="shell">
           <h2 className="mb-4 text-[clamp(2.2rem,4.6vw,3.4rem)] font-bold leading-[1.12] tracking-[-0.02em] text-navy">
-            Be first to try
+            Arriving with your
             <br />
-            Home Compass.
+            new home.
           </h2>
-          <p className="mx-auto mb-8 max-w-[520px]">
-            Join the waitlist and get updates when Home Compass becomes available.
+          <p className="mx-auto max-w-[560px]">
+            Home Compass is rolling out with residential developers first. When your home is handed over through Home Compass, your digital record is ready and waiting.
           </p>
-          <ShineButton size="lg" onClick={() => openModal('waitlist')}>
-            Join the Waitlist
-          </ShineButton>
         </Reveal>
       </section>
     </>
