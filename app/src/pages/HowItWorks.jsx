@@ -5,9 +5,9 @@ import FrameShot from '../components/FrameShot.jsx'
 import CardScroller from '../components/CardScroller.jsx'
 import Reveal from '../components/Reveal.jsx'
 import Eyebrow from '../components/Eyebrow.jsx'
-import dashDeveloper from '../assets/img/dash-developer.png'
-import dashEstates from '../assets/img/dash-estates.png'
-import dashHomeowner from '../assets/img/dash-homeowner.png'
+import dashDeveloper from '../assets/img/dash-developer.webp'
+import dashEstates from '../assets/img/dash-estates.webp'
+import dashHomeowner from '../assets/img/dash-homeowner.webp'
 
 const STEPS = [
   { title: 'Create the property profile', body: 'Address, plot number, development, property type, handover status.' },

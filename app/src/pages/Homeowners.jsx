@@ -3,8 +3,8 @@ import FrameShot from '../components/FrameShot.jsx'
 import CardScroller from '../components/CardScroller.jsx'
 import Reveal from '../components/Reveal.jsx'
 import Eyebrow from '../components/Eyebrow.jsx'
-import dashHomeowner from '../assets/img/dash-homeowner.png'
-import repairDetail from '../assets/img/repair-detail.png'
+import dashHomeowner from '../assets/img/dash-homeowner.webp'
+import repairDetail from '../assets/img/repair-detail.webp'
 
 const GAINS = [
   { title: 'Find documents faster', body: 'Key home records without digging through folders or inboxes.' },

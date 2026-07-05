@@ -22,4 +22,7 @@ Thumbs.db
 *.swp
 
 # Tooling caches
-.impeccable/hook.cache.json
+**/.impeccable/
+
+# Design reference images (kept locally, not shipped in the repo)
+/Card.png

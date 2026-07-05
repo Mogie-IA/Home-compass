@@ -5,8 +5,8 @@ import FrameShot from '../components/FrameShot.jsx'
 import CardScroller from '../components/CardScroller.jsx'
 import Reveal from '../components/Reveal.jsx'
 import Eyebrow from '../components/Eyebrow.jsx'
-import dashEstates from '../assets/img/dash-estates.png'
-import dashDeveloper from '../assets/img/dash-developer.png'
+import dashEstates from '../assets/img/dash-estates.webp'
+import dashDeveloper from '../assets/img/dash-developer.webp'
 
 const GAINS = [
   { title: 'Better buyer experience', body: 'A clear, modern way for owners to reach their home information after move-in.' },

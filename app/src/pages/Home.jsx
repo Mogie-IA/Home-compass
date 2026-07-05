@@ -8,12 +8,12 @@ import Reveal from '../components/Reveal.jsx'
 import Eyebrow from '../components/Eyebrow.jsx'
 import FaqItem from '../components/FaqItem.jsx'
 import ValueCards from '../components/ValueCards.jsx'
-import dashDeveloper from '../assets/img/dash-developer.png'
-import dashHomeowner from '../assets/img/dash-homeowner.png'
-import dashEstates from '../assets/img/dash-estates.png'
-import repairDetail from '../assets/img/repair-detail.png'
-import dashDocuments from '../assets/img/dash-documents.png'
-import dashReminders from '../assets/img/dash-reminders.png'
+import dashDeveloper from '../assets/img/dash-developer.webp'
+import dashHomeowner from '../assets/img/dash-homeowner.webp'
+import dashEstates from '../assets/img/dash-estates.webp'
+import repairDetail from '../assets/img/repair-detail.webp'
+import dashDocuments from '../assets/img/dash-documents.webp'
+import dashReminders from '../assets/img/dash-reminders.webp'
 
 const FEATURES = [
   { title: 'Handover Documents', body: 'Welcome packs and completion papers.', icon: 'doc' },
