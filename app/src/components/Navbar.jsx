@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'motion/react'
 import { Link, useLocation } from 'react-router-dom'
-import { useModal } from './ModalContext.jsx'
 import ShineButton from './ShineButton.jsx'
 import mark from '../assets/img/mark.png'
 
@@ -18,7 +17,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [hovered, setHovered] = useState(null)
-  const { openModal } = useModal()
   const { pathname } = useLocation()
   const reduce = useReducedMotion()
 
@@ -94,8 +92,8 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:block">
-            <ShineButton variant="inverse" size="sm" onClick={() => openModal('pilot')}>
-              Request a Pilot
+            <ShineButton variant="inverse" size="sm" to="/login">
+              Log in
             </ShineButton>
           </div>
 
@@ -195,12 +193,10 @@ export default function Navbar() {
                 variant="inverse"
                 size="lg"
                 className="w-full"
-                onClick={() => {
-                  setOpen(false)
-                  openModal('pilot')
-                }}
+                to="/login"
+                onClick={() => setOpen(false)}
               >
-                Request a Pilot
+                Log in
               </ShineButton>
               <p className="mt-4 text-center text-sm text-white/55">
                 Built for developers, estate teams, and homeowners.
